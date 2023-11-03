@@ -33,15 +33,13 @@ const CreditCardUI = ({ number, name, expiry, cvc }) => {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    [theme.breakpoints.up("md")]: {
-      backgroundImage: `url(${
-        parseInt(number[0]) === 4
-          ? visa
-          : parseInt(number[0]) === 5
-          ? mastercard
-          : american
-      })`,
-    },
+    backgroundImage: `url(${
+      parseInt(number[0]) === 4
+        ? visa
+        : parseInt(number[0]) === 5
+        ? mastercard
+        : american
+    })`,
   }));
   return (
     <Card
